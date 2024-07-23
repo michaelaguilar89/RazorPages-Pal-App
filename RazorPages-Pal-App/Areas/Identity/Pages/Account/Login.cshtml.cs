@@ -17,7 +17,7 @@ using Microsoft.Extensions.Logging;
 using RazorPages_Pal_App.Models;
 using RazorPages_Pal_App.Data;
 using Microsoft.EntityFrameworkCore;
-using AspNetCore;
+
 
 namespace RazorPages_Pal_App.Areas.Identity.Pages.Account
 {
@@ -25,16 +25,15 @@ namespace RazorPages_Pal_App.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
-        private readonly ApplicationDbContext _context;
-
         public LoginModel(SignInManager<ApplicationUser> signInManager,
-                          ILogger<LoginModel> logger,
-                          ApplicationDbContext context)
+                          ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
-            _context = context;
+            
         }
+
+       
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used

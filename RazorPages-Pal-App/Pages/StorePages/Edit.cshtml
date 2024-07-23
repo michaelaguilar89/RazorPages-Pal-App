@@ -1,0 +1,76 @@
+﻿@page
+@model RazorPages_Pal_App.Pages.StorePages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div class="row text-center">
+    <h1>Edit Record</h1>
+    <hr />
+    <div class="col-md-4 mx-auto 0">
+       <form method="post">
+           <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           <input asp-for="StoreDto.Id" type="hidden" />
+           <div class="form-group">
+               <label asp-for="StoreDto.ProductName" class="control-label"></label>
+               <input asp-for="StoreDto.ProductName" readonly="true" class="form-control" />
+               <span asp-validation-for="StoreDto.ProductName" class="text-danger"></span>
+           </div>
+            <div class="form-group">
+                <label asp-for="StoreDto.Batch" class="control-label"></label>
+                <input asp-for="StoreDto.Batch" readonly="true" class="form-control" />
+                <span asp-validation-for="StoreDto.Batch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreDto.Quantity" class="control-label"></label>
+                <input asp-for="StoreDto.Quantity" type="number" class="form-control" />
+                <span asp-validation-for="StoreDto.Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreDto.CreationTime" class="control-label"></label>
+                <input asp-for="StoreDto.CreationTime" class="form-control" />
+                <span asp-validation-for="StoreDto.CreationTime" class="text-danger"></span>
+            </div>
+            
+                <input asp-for="StoreDto.UserIdCreation" type="hidden" class="form-control" />
+             
+            <div class="form-group">
+                <label asp-for="StoreDto.UserNameCreation" class="control-label"></label>
+                <input asp-for="StoreDto.UserNameCreation" readonly="true" class="form-control" />
+                <span asp-validation-for="StoreDto.UserNameCreation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreDto.Description" class="control-label"></label>
+                <input asp-for="StoreDto.Description" class="form-control" />
+                <span asp-validation-for="StoreDto.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreDto.Comments" class="control-label"></label>
+                <input asp-for="StoreDto.Comments" class="form-control" />
+                <span asp-validation-for="StoreDto.Comments" class="text-danger"></span>
+            </div>
+            
+                <input asp-for="StoreDto.UserIdModification" type="hidden" class="form-control" />
+                
+            <div class="form-group">
+                <label asp-for="StoreDto.UserNameModification" class="control-label"></label>
+                <input asp-for="StoreDto.UserNameModification" readonly="true" class="form-control" />
+                <span asp-validation-for="StoreDto.UserNameModification" class="text-danger"></span>
+            </div>
+           <div class="form-group text-center pt-3">
+                <a asp-page="/StorePages/Index" class="btn btn-success mx-3">Go Back</a>
+               <input type="submit" value="Update" class="btn btn-primary"/>
+           </div>
+       </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

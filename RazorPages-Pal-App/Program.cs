@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RazorPages_Pal_App.Data;
 using RazorPages_Pal_App.Models;
+using RazorPages_Pal_App.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +23,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 builder.Services.AddScoped<UserManager<ApplicationUser>>();
 builder.Services.AddScoped<SignInManager<ApplicationUser>>();
 builder.Services.AddScoped<RoleManager<IdentityRole>>();
-
+builder.Services.AddScoped<StoreService>();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();

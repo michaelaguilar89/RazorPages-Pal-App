@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\pages\\storepages\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\pages\\storepages\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\service\\storeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\service\\storeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\pages\\storepages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\pages\\storepages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StoreService.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Service\\StoreService.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Service\\StoreService.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Service\\StoreService.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Service\\StoreService.cs",
+              "ViewState": "AQIAAJQAAAAAAAAAAAAAAJQAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T23:44:55.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\StorePages\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Pages\\StorePages\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\StorePages\\Edit.cshtml.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Pages\\StorePages\\Edit.cshtml.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAADQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T19:30:00.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\StorePages\\Edit.cshtml",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Pages\\StorePages\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\StorePages\\Edit.cshtml",
+              "RelativeToolTip": "RazorPages-Pal-App\\Pages\\StorePages\\Edit.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAQwEEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-22T19:01:58.691Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

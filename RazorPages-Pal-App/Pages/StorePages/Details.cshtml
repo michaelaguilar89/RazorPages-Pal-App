@@ -1,0 +1,28 @@
+﻿@page
+@model RazorPages_Pal_App.Pages.StorePages.DetailsModel
+@{
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto 0">
+            <h2 class="text-center text-primary mb-3">Details</h2>
+
+            <div class=card>
+                <div class="card-body text-center">
+                    <h3>Name :  @Model.Store.ProductName</h3>
+                    <p> Batch : @Model.Store.Batch</p>
+                    <p> Quantity : @Model.Store.Quantity</p>
+                    <p> CreationTime : @Model.Store.CreationTime</p>
+                    <p> User Creation : @Model.Store.UserNameCreation</p>
+                    <p> ModificacionTime : @Model.Store.ModificacionTime</p>
+                    <p> UserIdModification : @Model.Store.UserNameModification</p>
+                    <p> Description : @Model.Store.Description</p>
+                    <p> Comments : @Model.Store.Comments</p>
+
+                    <a asp-page="/StorePages/Index" class="btn btn-success mt-3">Go to Index</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

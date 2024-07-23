@@ -16,7 +16,7 @@ namespace RazorPages_Pal_App.Models
         [Required]
         public DateTime CreationTime { get; set; }
         
-        public DateTime ModificacionTime { get; set; }
+        public DateTime? ModificacionTime { get; set; }
         [Required, MaxLength(150)]
         public string Description { get; set; }
         [Required, MaxLength(150)]
@@ -24,7 +24,7 @@ namespace RazorPages_Pal_App.Models
         [Required]
         public string UserIdCreation { get; set; }
         
-        public string UserIdModification { get; set; }
+        public string? UserIdModification { get; set; }
         //navigation property
         [ForeignKey("UserIdCreation")]
         public ApplicationUser UserCreation { get; set; }

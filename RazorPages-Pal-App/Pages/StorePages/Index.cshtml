@@ -1,0 +1,58 @@
+﻿@page
+@model RazorPages_Pal_App.Pages.StorePages.IndexModel
+@{
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 text-center">
+
+            <h3 class="text-center text-primary">Store Index</h3>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Batch</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Creation Time</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">User Create</th>
+                        <th scope="col">Modification Time</th>
+                        <th scope="col">User Modification</th>
+                        <th scope="col">Comments</th>
+                        <th scope="col">Actions</th>
+                        <th scope="col"><a asp-page="/StorePages/Create" class="btn btn-primary">New</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.result == null)
+                    {
+                        <div class="text-danger">Data Not Found!</div>
+                    }
+                    else
+                        @foreach (var i in Model.result)
+                        {
+                            <tr>
+                                <th scope="row">@i.ProductName</th>
+                                <td>@i.Batch</td>
+                                <td>@i.Quantity</td>
+                                <td>@i.CreationTime</td>
+                                <td>@i.Description</td>
+                                <td>@i.UserNameCreation</td>
+                                <td>@i.ModificacionTime</td>
+                                <td>@i.UserNameModification</td>
+                                <td>@i.Comments</td>
+                                <td>
+                                    <a asp-page="/StorePages/Details" asp-route-id="@i.Id">Details</a>
+                                    <a asp-page="/StorePages/Edit" asp-route-id="@i.Id">Edit</a>
+                                </td>
+                            </tr>
+                        }
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

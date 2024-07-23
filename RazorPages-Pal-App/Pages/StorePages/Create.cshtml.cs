@@ -1,0 +1,86 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorPages_Pal_App.Dto_s;
+using RazorPages_Pal_App.Models;
+using RazorPages_Pal_App.Service;
+
+namespace RazorPages_Pal_App.Pages.StorePages
+{
+    public class CreateModel : PageModel
+    {
+        private readonly StoreService _storeService;
+        private readonly UserManager<ApplicationUser> _userManager;
+        public CreateModel(StoreService storeService,
+                          UserManager<ApplicationUser> userManager)
+        {
+            _storeService = storeService;
+            _userManager = userManager;
+        }
+
+
+        public string UserId { get; set; }
+       // [BindProperty]
+        public string? Messages { get; set; }
+
+        [BindProperty]
+        public StoreDto store { get; set; }
+        public async Task OnGetAsync()
+        {
+           
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                Messages = "Model Invalid!";
+                foreach (var modelState in ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        Console.WriteLine(error.ErrorMessage);
+                    }
+                }
+                return Page();
+            }
+            
+            
+            
+            try
+            {
+                var user = await _userManager.GetUserAsync(User);
+                if (user != null)
+                {
+                    UserId = user.Id;
+                }
+                var status = await _storeService.FindProductByName(store.ProductName);
+                if (status==true)
+                {
+                    Messages = " Error ! ," + store.ProductName + " ya existe!";
+                    return Page();
+                }
+                var resp = await _storeService.CreateStore(store, UserId);
+                if (resp == "1")
+                {
+                    return RedirectToPage("/StorePages/Index");
+                }
+                Messages = resp;
+                return Page();
+
+
+            }
+            catch (Exception e)  
+            {
+
+                Messages = e.Message;
+                return Page();
+            }
+                      
+
+            
+         
+
+        }
+    }
+}

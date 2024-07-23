@@ -198,10 +198,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/Production/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdGlvblxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -210,12 +206,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/StoreHistory/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmVIaXN0b3J5XEluZGV4LmNzaHRtbA==
+[C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/StorePages/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmVQYWdlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/Store/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmVcSW5kZXguY3NodG1s
+[C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/StorePages/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmVQYWdlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/StorePages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmVQYWdlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/StorePages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RvcmVQYWdlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/mchla/OneDrive/Documentos/Proyectos/RazorPages-Pal-App/RazorPages-Pal-App/Pages/_ViewImports.cshtml]
