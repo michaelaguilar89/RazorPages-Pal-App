@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using RazorPages_Pal_App.Data;
 using RazorPages_Pal_App.Dto_s;
 using RazorPages_Pal_App.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace RazorPages_Pal_App.Service
 {
@@ -13,7 +15,33 @@ namespace RazorPages_Pal_App.Service
         {
             _context = context;
         }
+        public async Task<string> UpdateStore(ResultStoreDto storeDto, string secret)
+        {
+            try
+            {
+              
+                    Store store = new();
+                    store.Id = storeDto.Id;
+                    store.ProductName = storeDto.ProductName;
+                    store.Batch = storeDto.Batch;
+                    store.Quantity = storeDto.Quantity;
+                    store.CreationTime = DateTime.SpecifyKind(storeDto.CreationTime, DateTimeKind.Utc);
+                    store.Description = storeDto.Description;
+                    store.Comments = storeDto.Comments;
+                    store.UserIdCreation = storeDto.UserIdCreation;
+                store.ModificacionTime = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");              
+                store.UserIdModification = secret;
+                    _context.stores.Update(store);
+                    await _context.SaveChangesAsync();
+                    return "1";
+                
+            }
+            catch (Exception e )
+            {
 
+                return e.Message;
+            }
+        }
         public async Task<string> CreateStore(StoreDto storeDto,string secret)
         {
             try
@@ -26,7 +54,7 @@ namespace RazorPages_Pal_App.Service
                 store.Description = storeDto.Description;
                 store.Comments = storeDto.Comments;
                 store.UserIdCreation = secret;
-                store.ModificacionTime = null;
+                store.ModificacionTime = "---";
               //  store.UserIdModification = secret;
                 await _context.stores.AddAsync(store);
                 await _context.SaveChangesAsync();
@@ -39,6 +67,101 @@ namespace RazorPages_Pal_App.Service
             }
         }
 
+        public async Task<List<ResultStoreDto>> getStoresByNameOrBatch(string search)
+        {
+                var stores = await _context.stores
+      .Include(store => store.UserCreation) // Incluir el usuario de creación
+      .Include(store => store.UserModification) // Incluir el usuario de modificación
+      .Where(z=>z.ProductName.ToLower().Contains(search.ToLower())||
+             z.Batch.ToLower().Contains(search.ToLower()))
+      .Select(store => new ResultStoreDto
+      {
+          Id = store.Id,
+          ProductName = store.ProductName,
+          Batch = store.Batch,
+          Quantity = store.Quantity,
+          CreationTime = store.CreationTime,
+          ModificacionTime = store.ModificacionTime,
+          Description = store.Description,
+          Comments = store.Comments,
+          UserIdCreation = store.UserIdCreation,
+          UserNameCreation = store.UserCreation != null ? store.UserCreation.UserName : "Unknown", // Manejo de potencial null
+          UserIdModification = store.UserIdModification,
+          UserNameModification = store.UserModification != null ? store.UserModification.UserName : "Unknown" // Manejo de potencial null
+          })
+          .ToListAsync();
+
+
+
+           return stores;            
+        }
+        public async Task<List<ResultStoreDto>> getStoresByNameOrBatchAndDate(string search,DateTime? searchDate)
+        {
+            var stores = await _context.stores
+  .Include(store => store.UserCreation) // Incluir el usuario de creación
+  .Include(store => store.UserModification) // Incluir el usuario de modificación
+  .Where(z => z.CreationTime.Equals(searchDate) || z.ProductName.ToLower().Contains(search.ToLower()) ||
+         z.Batch.ToLower().Contains(search.ToLower()))
+  .Select(store => new ResultStoreDto
+  {
+      Id = store.Id,
+      ProductName = store.ProductName,
+      Batch = store.Batch,
+      Quantity = store.Quantity,
+      CreationTime = store.CreationTime,
+      ModificacionTime = store.ModificacionTime,
+      Description = store.Description,
+      Comments = store.Comments,
+      UserIdCreation = store.UserIdCreation,
+      UserNameCreation = store.UserCreation != null ? store.UserCreation.UserName : "Unknown", // Manejo de potencial null
+      UserIdModification = store.UserIdModification,
+      UserNameModification = store.UserModification != null ? store.UserModification.UserName : "Unknown" // Manejo de potencial null
+  })
+      .ToListAsync();
+
+
+
+            return stores;
+        }
+
+        public async Task<List<ResultStoreDto>> getStoresByDate(DateTime? searchDate)
+        {
+            // Convertir la fecha a UTC y calcular el rango del día
+            var dateOnly = searchDate.Value.Date;
+            var startOfDay = dateOnly.ToUniversalTime();
+            var endOfDay = startOfDay.AddDays(1);
+            // Imprimir los valores para depuración
+            Console.WriteLine($"Searching between: {startOfDay} and {endOfDay}");
+
+             var stores = await _context.stores
+  .Include(store => store.UserCreation) // Incluir el usuario de creación
+  .Include(store => store.UserModification) // Incluir el usuario de modificación
+   .Where(z => z.CreationTime.Equals(dateOnly)) // Comparación por rango de fecha
+  .Select(store => new ResultStoreDto
+  {
+      Id = store.Id,
+      ProductName = store.ProductName,
+      Batch = store.Batch,
+      Quantity = store.Quantity,
+      CreationTime = store.CreationTime,
+      ModificacionTime = store.ModificacionTime,
+      Description = store.Description,
+      Comments = store.Comments,
+      UserIdCreation = store.UserIdCreation,
+      UserNameCreation = store.UserCreation != null ? store.UserCreation.UserName : "Unknown", // Manejo de potencial null
+      UserIdModification = store.UserIdModification,
+      UserNameModification = store.UserModification != null ? store.UserModification.UserName : "Unknown" // Manejo de potencial null
+  })
+      .ToListAsync();
+
+           
+            
+            // Imprimir el número de resultados para depuración
+            Console.WriteLine($"Number of results: {stores.Count}");
+
+            return stores;
+
+        }
         public async Task<List<ResultStoreDto>> GetStoresWithUsernamesAsync()
         {
            /* var stores = await (from store in _context.stores
@@ -72,7 +195,7 @@ namespace RazorPages_Pal_App.Service
           Batch = store.Batch,
           Quantity = store.Quantity,
           CreationTime = store.CreationTime,
-          ModificacionTime = store.ModificacionTime.Value, 
+          ModificacionTime = store.ModificacionTime, 
           Description = store.Description,
           Comments = store.Comments,
           UserIdCreation = store.UserIdCreation,
@@ -114,13 +237,13 @@ namespace RazorPages_Pal_App.Service
              Batch = store.Batch,
              Quantity = store.Quantity,
              CreationTime = store.CreationTime,
-             ModificacionTime = store.ModificacionTime.Value,
+             ModificacionTime = store.ModificacionTime,
              Description = store.Description,
              Comments = store.Comments,
              UserIdCreation = store.UserIdCreation,
              UserNameCreation = store.UserCreation != null ? store.UserCreation.UserName : "Unknown",
              UserIdModification = store.UserIdModification,
-             UserNameModification = store.UserModification != null ? store.UserModification.UserName : "Unknown"
+             UserNameModification = store.UserModification != null ? store.UserModification.UserName : "---"
          })
          .FirstOrDefaultAsync();
 
@@ -154,26 +277,7 @@ namespace RazorPages_Pal_App.Service
                 return false;
             }
         }
-        public async Task<string> UpdateAsync(Store store) 
-        {
-            try
-            {
-               var exist = Exist(store.Id);
-                if (exist.Equals(true))
-                {
-                    _context.stores.Update(store);
-                    await _context.SaveChangesAsync();
-                    return "1";
-                }
-                return "0";
-            }
-            catch (Exception e)
-            {
-
-                return e.Message;
-            }
-           
-        }
+       
 
         public async Task<bool> FindProductByName(string name){
             try

@@ -24,6 +24,7 @@ builder.Services.AddScoped<UserManager<ApplicationUser>>();
 builder.Services.AddScoped<SignInManager<ApplicationUser>>();
 builder.Services.AddScoped<RoleManager<IdentityRole>>();
 builder.Services.AddScoped<StoreService>();
+builder.Services.AddScoped<ProductionService>();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();

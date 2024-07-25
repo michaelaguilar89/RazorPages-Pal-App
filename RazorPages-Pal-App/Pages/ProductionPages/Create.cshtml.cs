@@ -1,0 +1,58 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorPages_Pal_App.Dto_s;
+using RazorPages_Pal_App.Models;
+using RazorPages_Pal_App.Service;
+
+namespace RazorPages_Pal_App.Pages.ProductionPages
+{
+    public class CreateModel : PageModel
+    {
+        private readonly ProductionService _productionService;
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public CreateModel(ProductionService productionService,
+                           UserManager<ApplicationUser> userManager)
+        {
+            _productionService = productionService;
+            _userManager = userManager;
+        }
+
+        public string Messages { get; set; }
+        private string UserId { get; set; }
+
+        [BindProperty]
+        public ProductionDto productionDto { get; set; }
+        public void OnGet()
+        {
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                Messages = "Model InValid";
+                Console.WriteLine("Date : "+DateTime.Now+" --Model InValid:Create production");
+                foreach (var modelState in ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        Console.WriteLine(error.ErrorMessage);
+                    }
+                }
+                return Page();
+            }
+            Messages = "Model Valid";
+            Console.WriteLine("Date : " + DateTime.UtcNow + " --Model Valid");
+            var user = await _userManager.GetUserAsync(User);
+            if (user != null)
+            {
+                UserId = user.Id;
+            }
+
+            return RedirectToPage("/ProductionPages/Index");
+        }
+
+    }
+}

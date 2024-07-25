@@ -16,7 +16,7 @@ namespace RazorPages_Pal_App.Dto_s
         public decimal Quantity { get; set; }
         [Required]
         public DateTime CreationTime { get; set; }
-        public DateTime? ModificacionTime { get; set; }
+        public string? ModificacionTime { get; set; }
         
         public string? Description { get; set; }
         

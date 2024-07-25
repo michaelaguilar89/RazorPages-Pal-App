@@ -54,12 +54,12 @@ namespace RazorPages_Pal_App.Pages.StorePages
                 {
                     UserId = user.Id;
                 }
-                var status = await _storeService.FindProductByName(store.ProductName);
+              /*  var status = await _storeService.FindProductByName(store.ProductName);
                 if (status==true)
                 {
                     Messages = " Error ! ," + store.ProductName + " ya existe!";
                     return Page();
-                }
+                }*/
                 var resp = await _storeService.CreateStore(store, UserId);
                 if (resp == "1")
                 {

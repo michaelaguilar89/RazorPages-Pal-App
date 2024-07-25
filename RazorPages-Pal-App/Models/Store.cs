@@ -16,7 +16,7 @@ namespace RazorPages_Pal_App.Models
         [Required]
         public DateTime CreationTime { get; set; }
         
-        public DateTime? ModificacionTime { get; set; }
+        public string ModificacionTime { get; set; } 
         [Required, MaxLength(150)]
         public string Description { get; set; }
         [Required, MaxLength(150)]

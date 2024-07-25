@@ -7,7 +7,10 @@
     <div class="row">
         <div class="col-md-6 mx-auto 0">
             <h2 class="text-center text-primary mb-3">Details</h2>
-
+            @if (Model.Messages != null)
+            {
+                <div class="text-danger">Status : @Model.Messages</div>
+            }
             <div class=card>
                 <div class="card-body text-center">
                     <h3>Name :  @Model.Store.ProductName</h3>
@@ -20,7 +23,11 @@
                     <p> Description : @Model.Store.Description</p>
                     <p> Comments : @Model.Store.Comments</p>
 
-                    <a asp-page="/StorePages/Index" class="btn btn-success mt-3">Go to Index</a>
+                    <div class="text-center">
+                        <a asp-page="/StorePages/Index" class="btn btn-success mt-3">Go to Index</a>
+                        <a asp-page="/StorePages/Edit" class="btn btn-secondary mx-3 mt-3" asp-route-id="@Model.Store.Id">Edit</a>
+                    </div>
+                    
                 </div>
             </div>
         </div>

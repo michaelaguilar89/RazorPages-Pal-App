@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using RazorPages_Pal_App.Data;
@@ -11,9 +12,11 @@ using RazorPages_Pal_App.Data;
 namespace RazorPages_Pal_App.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240723174246_updateStoreModelv2")]
+    partial class updateStoreModelv2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -176,6 +179,7 @@ namespace RazorPages_Pal_App.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("ModificacionTime")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("ProductName")
@@ -302,7 +306,7 @@ namespace RazorPages_Pal_App.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("character varying(10)");
 
-                    b.Property<DateTime?>("ModificacionTime")
+                    b.Property<DateTime>("ModificacionTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ProductName")
@@ -326,6 +330,7 @@ namespace RazorPages_Pal_App.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("UserIdModification")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -513,7 +518,9 @@ namespace RazorPages_Pal_App.Migrations
 
                     b.HasOne("RazorPages_Pal_App.Models.ApplicationUser", "UserModification")
                         .WithMany()
-                        .HasForeignKey("UserIdModification");
+                        .HasForeignKey("UserIdModification")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("UserCreation");
 

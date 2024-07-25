@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RazorPages_Pal_App.Data;
 using RazorPages_Pal_App.Dto_s;
+using RazorPages_Pal_App.Models;
 using RazorPages_Pal_App.Service;
 
 namespace RazorPages_Pal_App.Pages.StorePages
@@ -15,21 +17,25 @@ namespace RazorPages_Pal_App.Pages.StorePages
     public class EditModel : PageModel
     {
         private readonly StoreService _storeService;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public EditModel(StoreService storeService)
+        public EditModel(StoreService storeService, UserManager<ApplicationUser> userManager)
         {
             _storeService = storeService;
+            _userManager = userManager;
         }
 
         [BindProperty]
         public ResultStoreDto StoreDto { get; set; } = default!;
+        public string UserId { get; set; }
 
         public string Messages { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                Messages = "Data not Found!";
+                return Page();
             }
 
             var resultstoredto =  await _storeService.GetStoreByIdWitnName(id);
@@ -48,13 +54,53 @@ namespace RazorPages_Pal_App.Pages.StorePages
             if (!ModelState.IsValid)
             {
                 Messages = "Model Invalid";
+                foreach (var modelState in ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        Console.WriteLine("Error : "+error.ErrorMessage);
+                    }
+                }
                 return Page();
 
             }
-            Messages = "Model is oK";
-            return Page();
            
+                var user = await _userManager.GetUserAsync(User);
+                if (user != null)
+                {
+                    UserId = user.Id;
+                }
+                //StoreDto.ModificacionTime = DateTimeOffset.Now;
+                var resp = await _storeService.UpdateStore(StoreDto, UserId);
+                if (resp=="1")
+                {
+                    return RedirectToPage("/StorePages/Index");
+                }
+                if (resp=="0")
+                {
+                    Messages = "Internal Error";
+                    return Page();
+                }
+                Messages = resp;
+                return Page();
 
+           
+            Messages = "Cannot get data";
+            return Page();
+         
+
+                       
+
+        }
+
+        private string getSecret()
+        {
+            var user = _userManager.GetUserAsync(User);
+            if (user != null)
+            {
+                return user.Id.ToString();
+            }
+            return null;
         }
 
       /*  private bool ResultStoreDtoExists(int id)
