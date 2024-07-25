@@ -162,6 +162,9 @@ namespace RazorPages_Pal_App.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<decimal>("ActualQuantity")
+                        .HasColumnType("numeric");
+
                     b.Property<string>("Batch")
                         .IsRequired()
                         .HasColumnType("text");
@@ -175,14 +178,14 @@ namespace RazorPages_Pal_App.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
-                    b.Property<string>("ModificacionTime")
-                        .HasColumnType("text");
+                    b.Property<DateTime?>("ModificationAt")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Quantity")
+                    b.Property<decimal>("TotalQuantity")
                         .HasColumnType("numeric");
 
                     b.Property<string>("UserIdCreation")
@@ -347,6 +350,9 @@ namespace RazorPages_Pal_App.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<decimal>("ActualQuantity")
+                        .HasColumnType("decimal(10,2)");
+
                     b.Property<string>("Batch")
                         .IsRequired()
                         .HasMaxLength(30)
@@ -365,16 +371,15 @@ namespace RazorPages_Pal_App.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("character varying(150)");
 
-                    b.Property<string>("ModificacionTime")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<DateTime?>("ModificationAt")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.Property<decimal>("Quantity")
+                    b.Property<decimal>("TotalQuantity")
                         .HasColumnType("decimal(10,2)");
 
                     b.Property<string>("UserIdCreation")

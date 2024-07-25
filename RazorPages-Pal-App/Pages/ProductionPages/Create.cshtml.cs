@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -7,6 +8,7 @@ using RazorPages_Pal_App.Service;
 
 namespace RazorPages_Pal_App.Pages.ProductionPages
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly ProductionService _productionService;
@@ -51,7 +53,14 @@ namespace RazorPages_Pal_App.Pages.ProductionPages
                 UserId = user.Id;
             }
 
-            return RedirectToPage("/ProductionPages/Index");
+            var resp = await _productionService.Create(productionDto, UserId);
+            if (resp=="1")
+            {
+                return RedirectToPage("/ProductionPages/Index");
+            }
+            Messages = resp;
+            return Page();
+           
         }
 
     }

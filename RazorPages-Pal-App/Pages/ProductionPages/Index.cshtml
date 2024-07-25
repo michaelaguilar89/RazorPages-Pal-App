@@ -5,8 +5,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 mx-auto 0">
-            <h3 text-center>Production </h3>
+        <div class="col-md-10 mx-auto 0">
+            <h3 class="text-center">list of Production ( @Model.list?.Count() ) </h3>
             <table class="table">
                 <thead>
                     <tr>
@@ -17,30 +17,53 @@
                         <th scope="col">Tank</th>
                         <th scope="col">Final Level</th>
                         <th scope="col">User</th>
+                        <th scope="col">Comments</th>
+                        <th scope="col">Options</th>
                         <th scope="col">
                             <a href="/ProductionPages/Create" class="btn btn-primary">New</a>
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>twitter</td>
-                    </tr>
-                </tbody>
+                    @if ( Model.list == null)
+                    {
+                        <h3>Data not found</h3>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model.list)
+                        {
+                            <tr>
+                                <td>@item.CreationTime</td>
+                                <th scope="row">@item.ProductName</th>
+                                <td>@item.Batch</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.Tank</td>
+                                <td>@item.FinalLevel</td>
+                                <td>@item.UserIdCreation</td>
+                                <td>@item.Comments</td>
+                                <td>
+                                    <a>Details</a>
+                                    <a>Edit</a>
+                                </td>
+                            </tr>
+
+                        }
+
+
+                    }
+
+                    
+                    
+                    @if (Model.list!=null)
+                    {
+                        
+
+                    }
+                    else
+                    {
+                        
+                    }                 </tbody>
             </table>
         </div>
     </div>

@@ -28,9 +28,24 @@
                 <span asp-validation-for="StoreDto.Batch" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="StoreDto.Quantity" class="control-label"></label>
-                <input asp-for="StoreDto.Quantity" type="number" class="form-control" />
-                <span asp-validation-for="StoreDto.Quantity" class="text-danger"></span>
+                <label asp-for="StoreDto.TotalQuantity" class="control-label"></label>
+                <input asp-for="StoreDto.TotalQuantity" type="number" class="form-control" />
+                <span asp-validation-for="StoreDto.TotalQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreDto.ActualQuantity" class="control-label"></label>
+                <input asp-for="StoreDto.ActualQuantity" type="number" class="form-control" />
+                <span asp-validation-for="StoreDto.ActualQuantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreDto.operation" class="control-label"></label>
+                <input asp-for="StoreDto.operation" type="number" class="form-control" />
+                <span asp-validation-for="StoreDto.operation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreDto.UpdateQuantity" class="control-label"></label>
+                <input asp-for="StoreDto.UpdateQuantity" type="number" class="form-control" />
+                <span asp-validation-for="StoreDto.UpdateQuantity" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="StoreDto.CreationTime" class="control-label"></label>

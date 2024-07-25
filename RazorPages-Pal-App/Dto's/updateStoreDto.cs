@@ -1,12 +1,9 @@
-﻿using RazorPages_Pal_App.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace RazorPages_Pal_App.Dto_s
 {
-    public class ResultStoreDto
+    public class updateStoreDto
     {
-        
         public int Id { get; set; }
         [Required]
         public string ProductName { get; set; }
@@ -16,13 +13,17 @@ namespace RazorPages_Pal_App.Dto_s
         public decimal TotalQuantity { get; set; }
         [Required]
         public decimal ActualQuantity { get; set; }
+        [Required(ErrorMessage ="The operation is required , exapmle + , - , 0")]
+        public string operation { get; set; }
+        [Required]
+        public decimal UpdateQuantity { get; set; }
 
         [Required]
         public DateTime CreationTime { get; set; }
-        public DateTime? ModificationAt { get; set; }
-        
+        public DateTime? ModificacionTime { get; set; }
+
         public string? Description { get; set; }
-        
+
         public string? Comments { get; set; }
         [Required]
         public string? UserIdCreation { get; set; }
@@ -30,7 +31,7 @@ namespace RazorPages_Pal_App.Dto_s
 
         public string? UserIdModification { get; set; }
         public string? UserNameModification { get; set; }
-       
+
 
     }
 }

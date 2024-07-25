@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -7,6 +8,7 @@ using RazorPages_Pal_App.Service;
 
 namespace RazorPages_Pal_App.Pages.StorePages
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly StoreService _storeService;
@@ -25,9 +27,19 @@ namespace RazorPages_Pal_App.Pages.StorePages
 
         [BindProperty]
         public StoreDto store { get; set; }
-        public async Task OnGetAsync()
+        public async void OnGetAsync()
         {
-           
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+
+             
+                Console.WriteLine("Error : " + e.Message);
+              
+            }
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -74,6 +86,7 @@ namespace RazorPages_Pal_App.Pages.StorePages
             {
 
                 Messages = e.Message;
+                Console.WriteLine("Error : " + e.Message);
                 return Page();
             }
                       

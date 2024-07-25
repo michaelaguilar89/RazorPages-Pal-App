@@ -12,8 +12,8 @@ using RazorPages_Pal_App.Data;
 namespace RazorPages_Pal_App.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240709191403_initialModels")]
-    partial class initialModels
+    [Migration("20240725201412_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -104,12 +104,10 @@ namespace RazorPages_Pal_App.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("character varying(128)");
+                        .HasColumnType("text");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("character varying(128)");
+                        .HasColumnType("text");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("text");
@@ -146,12 +144,10 @@ namespace RazorPages_Pal_App.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("character varying(128)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("character varying(128)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Value")
                         .HasColumnType("text");
@@ -159,6 +155,58 @@ namespace RazorPages_Pal_App.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("RazorPages_Pal_App.Dto_s.ResultStoreDto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("ActualQuantity")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("Batch")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Comments")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("ModificationAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("TotalQuantity")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("UserIdCreation")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserIdModification")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserNameCreation")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserNameModification")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ResultStoreDto");
                 });
 
             modelBuilder.Entity("RazorPages_Pal_App.Models.ApplicationUser", b =>
@@ -260,7 +308,7 @@ namespace RazorPages_Pal_App.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("character varying(10)");
 
-                    b.Property<DateTime>("ModificacionTime")
+                    b.Property<DateTime?>("ModificacionTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ProductName")
@@ -284,7 +332,6 @@ namespace RazorPages_Pal_App.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("UserIdModification")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -306,6 +353,9 @@ namespace RazorPages_Pal_App.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<decimal>("ActualQuantity")
+                        .HasColumnType("decimal(10,2)");
+
                     b.Property<string>("Batch")
                         .IsRequired()
                         .HasMaxLength(30)
@@ -324,7 +374,7 @@ namespace RazorPages_Pal_App.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("character varying(150)");
 
-                    b.Property<DateTime>("ModificacionTime")
+                    b.Property<DateTime?>("ModificationAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ProductName")
@@ -332,7 +382,7 @@ namespace RazorPages_Pal_App.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.Property<decimal>("Quantity")
+                    b.Property<decimal>("TotalQuantity")
                         .HasColumnType("decimal(10,2)");
 
                     b.Property<string>("UserIdCreation")
@@ -340,7 +390,6 @@ namespace RazorPages_Pal_App.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("UserIdModification")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -472,9 +521,7 @@ namespace RazorPages_Pal_App.Migrations
 
                     b.HasOne("RazorPages_Pal_App.Models.ApplicationUser", "UserModification")
                         .WithMany()
-                        .HasForeignKey("UserIdModification")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserIdModification");
 
                     b.Navigation("UserCreation");
 
@@ -493,9 +540,7 @@ namespace RazorPages_Pal_App.Migrations
 
                     b.HasOne("RazorPages_Pal_App.Models.ApplicationUser", "UserModification")
                         .WithMany()
-                        .HasForeignKey("UserIdModification")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserIdModification");
 
                     b.Navigation("UserCreation");
 

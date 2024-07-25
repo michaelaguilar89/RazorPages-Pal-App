@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPages_Pal_App.Dto_s;
@@ -6,6 +7,7 @@ using RazorPages_Pal_App.Service;
 
 namespace RazorPages_Pal_App.Pages.StorePages
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly StoreService _storeService;
@@ -21,7 +23,8 @@ namespace RazorPages_Pal_App.Pages.StorePages
         public List<ResultStoreDto> result { get; set; }
         [BindProperty(SupportsGet = true)]
         public string? search { get; set; }
-        [BindProperty(SupportsGet =true)]
+        [BindProperty(SupportsGet = true)]
+        public int records { get; set; } = 0;
         public DateTime? searchDate { get; set; }
         public async Task<IActionResult> OnGet(string? searchString, DateTime? searchDateValue)
         {
@@ -68,7 +71,12 @@ namespace RazorPages_Pal_App.Pages.StorePages
              {
                  Messages = "Data not found, try agin...";
 
-             }
+                }
+                else
+                {
+                   // records = result.Count();
+                }
+                
             return Page();
             }
             catch (Exception e)

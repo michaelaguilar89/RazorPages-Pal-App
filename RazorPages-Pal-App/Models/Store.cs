@@ -12,15 +12,18 @@ namespace RazorPages_Pal_App.Models
         [Required, MaxLength(30)]
         public string Batch { get; set; }
         [Required, Column(TypeName = "decimal(10,2)")]
-        public decimal Quantity { get; set; }
+        public decimal TotalQuantity { get; set; }
+        [Required, Column(TypeName = "decimal(10,2)")]
+        public decimal ActualQuantity { get; set; }
         [Required]
         public DateTime CreationTime { get; set; }
         
-        public string ModificacionTime { get; set; } 
+         
         [Required, MaxLength(150)]
         public string Description { get; set; }
         [Required, MaxLength(150)]
         public string Comments { get; set; }
+        public DateTime? ModificationAt { get; set; }
         [Required]
         public string UserIdCreation { get; set; }
         

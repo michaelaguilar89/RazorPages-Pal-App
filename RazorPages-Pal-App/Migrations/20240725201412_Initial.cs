@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace RazorPages_Pal_App.Migrations
 {
     /// <inheritdoc />
-    public partial class initialModels : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -52,6 +52,30 @@ namespace RazorPages_Pal_App.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ResultStoreDto",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ProductName = table.Column<string>(type: "text", nullable: false),
+                    Batch = table.Column<string>(type: "text", nullable: false),
+                    TotalQuantity = table.Column<decimal>(type: "numeric", nullable: false),
+                    ActualQuantity = table.Column<decimal>(type: "numeric", nullable: false),
+                    CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ModificationAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    Description = table.Column<string>(type: "text", nullable: true),
+                    Comments = table.Column<string>(type: "text", nullable: true),
+                    UserIdCreation = table.Column<string>(type: "text", nullable: false),
+                    UserNameCreation = table.Column<string>(type: "text", nullable: true),
+                    UserIdModification = table.Column<string>(type: "text", nullable: true),
+                    UserNameModification = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ResultStoreDto", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -100,8 +124,8 @@ namespace RazorPages_Pal_App.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(type: "text", nullable: false),
+                    ProviderKey = table.Column<string>(type: "text", nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "text", nullable: true),
                     UserId = table.Column<string>(type: "text", nullable: false)
                 },
@@ -145,8 +169,8 @@ namespace RazorPages_Pal_App.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "text", nullable: false),
-                    LoginProvider = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
-                    Name = table.Column<string>(type: "character varying(128)", maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
                     Value = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
@@ -201,13 +225,14 @@ namespace RazorPages_Pal_App.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ProductName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     Batch = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
-                    Quantity = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    TotalQuantity = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
+                    ActualQuantity = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
                     CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ModificacionTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Description = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
                     Comments = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
+                    ModificationAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     UserIdCreation = table.Column<string>(type: "text", nullable: false),
-                    UserIdModification = table.Column<string>(type: "text", nullable: false)
+                    UserIdModification = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -222,8 +247,7 @@ namespace RazorPages_Pal_App.Migrations
                         name: "FK_stores_AspNetUsers_UserIdModification",
                         column: x => x.UserIdModification,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -239,9 +263,9 @@ namespace RazorPages_Pal_App.Migrations
                     Tank = table.Column<string>(type: "character varying(10)", maxLength: 10, nullable: false),
                     FinalLevel = table.Column<string>(type: "character varying(10)", maxLength: 10, nullable: false),
                     CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ModificacionTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ModificacionTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     UserIdCreation = table.Column<string>(type: "text", nullable: false),
-                    UserIdModification = table.Column<string>(type: "text", nullable: false),
+                    UserIdModification = table.Column<string>(type: "text", nullable: true),
                     Comments = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false)
                 },
                 constraints: table =>
@@ -257,8 +281,7 @@ namespace RazorPages_Pal_App.Migrations
                         name: "FK_productions_AspNetUsers_UserIdModification",
                         column: x => x.UserIdModification,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_productions_stores_StoreId",
                         column: x => x.StoreId,
@@ -360,6 +383,9 @@ namespace RazorPages_Pal_App.Migrations
 
             migrationBuilder.DropTable(
                 name: "productions");
+
+            migrationBuilder.DropTable(
+                name: "ResultStoreDto");
 
             migrationBuilder.DropTable(
                 name: "storeHistories");

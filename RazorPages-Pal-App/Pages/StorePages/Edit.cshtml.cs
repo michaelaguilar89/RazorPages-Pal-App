@@ -26,8 +26,9 @@ namespace RazorPages_Pal_App.Pages.StorePages
         }
 
         [BindProperty]
-        public ResultStoreDto StoreDto { get; set; } = default!;
+        public updateStoreDto StoreDto { get; set; } = default!;
         public string UserId { get; set; }
+        public string operation { get; set; }
 
         public string Messages { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(int? id)

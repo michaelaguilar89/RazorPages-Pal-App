@@ -20,6 +20,7 @@ namespace RazorPages_Pal_App.Dto_s
         public string FinalLevel { get; set; }
         [Required]
         public DateTime CreationTime { get; set; }
+        public string Comments { get; set; }
 
     }
 }

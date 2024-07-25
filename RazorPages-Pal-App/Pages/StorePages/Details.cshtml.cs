@@ -19,7 +19,7 @@ namespace RazorPages_Pal_App.Pages.StorePages
         public string Messages { get; set; }
 
         [BindProperty]
-        public ResultStoreDto Store { get; set; } 
+        public updateStoreDto Store { get; set; } 
         public async Task<IActionResult> OnGet(int? id)
         {
             try

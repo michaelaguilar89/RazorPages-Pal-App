@@ -123,6 +123,7 @@ namespace RazorPages_Pal_App.Areas.Identity.Pages.Account
                 {
                   
                     _logger.LogInformation("User logged in.");
+
                  
                     return LocalRedirect(returnUrl);
                 }

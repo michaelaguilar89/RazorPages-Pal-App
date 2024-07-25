@@ -118,8 +118,8 @@ namespace RazorPages_Pal_App.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email ,CancellationToken.None);
                 //  await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                user.CreationTime = DateTime.Now;
-                user.LastLoginTime = DateTime.Now;
+                user.CreationTime = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc);
+                user.LastLoginTime = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc);
                 user.IsActived = true;
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
