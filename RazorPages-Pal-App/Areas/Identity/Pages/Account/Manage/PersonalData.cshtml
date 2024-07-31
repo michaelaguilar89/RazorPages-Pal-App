@@ -9,16 +9,51 @@
 
 <div class="row">
     <div class="col-md-6">
-        <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
-        <p>
-            <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
-        </p>
-        <form id="download-data" asp-page="DownloadPersonalData" method="post">
-            <button class="btn btn-primary" type="submit">Download</button>
-        </form>
-        <p>
-            <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger">Delete</a>
-        </p>
+        @if (Model.Messages!=null)
+        {
+            <h3 class="text-danger">
+                @Model.Messages
+            </h3>
+        }
+        else
+        {
+            <form name="create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="userDto.UserName" class="control-label"></label>
+                    <input asp-for="userDto.UserName" class="form-control" />
+                    <span asp-validation-for="userDto.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="userDto.CreationTime" class="control-label"></label>
+                    <input asp-for="userDto.CreationTime" class="form-control" />
+                    <span asp-validation-for="userDto.CreationTime" class="text-danger"></span>
+                </div>
+                <!--
+                    <div class="form-group">
+                    <label asp-for="userDto.IsActived" class="control-label"></label>
+                    <input asp-for="userDto.IsActived" class="form-control" />
+                    <span asp-validation-for="userDto.IsActived" class="text-danger"></span>
+                </div>
+                -->
+                <div class="form-group pt-3">
+                    <a href="/ProductionPages/Index" class="btn btn-secondary btn-lg mx-3">Go Back</a>
+                    <input type="submit" class="btn btn-lg btn-primary mx-3" value="Save" />
+                </div>
+            </form>
+            <p>Your account contains personal data that you have given us. This page allows you to download that data.</p>
+            <p>
+                <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+            </p>
+            <form id="download-data" asp-page="DownloadPersonalData" method="post">
+                <button class="btn btn-primary" type="submit">Download</button>
+            </form>
+            <p>
+                <a asp-page="ChangePassword" class="btn btn-success">Change Password!</a>
+            </p>
+        }
+
+        
     </div>
 </div>
 

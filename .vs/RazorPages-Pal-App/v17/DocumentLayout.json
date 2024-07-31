@@ -3,16 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\pages\\productionpages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\pages\\productionpages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\areas\\identity\\pages\\account\\manage\\personaldata.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\areas\\identity\\pages\\account\\manage\\personaldata.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\service\\productionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\service\\productionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\areas\\identity\\pages\\account\\manage\\personaldata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\areas\\identity\\pages\\account\\manage\\personaldata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\dto\u0027s\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\dto\u0027s\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\dto\u0027s\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\dto\u0027s\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\pages\\productionpages\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\pages\\productionpages\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|c:\\users\\mchla\\onedrive\\documentos\\proyectos\\razorpages-pal-app\\razorpages-pal-app\\razorpages-pal-app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1BAF51E8-6AE0-4639-A1B6-882DA73C9EFE}|RazorPages-Pal-App\\RazorPages-Pal-App.csproj|solutionrelative:razorpages-pal-app\\razorpages-pal-app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,41 +82,197 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\ProductionPages\\Index.cshtml",
-              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Pages\\ProductionPages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\ProductionPages\\Index.cshtml",
-              "RelativeToolTip": "RazorPages-Pal-App\\Pages\\ProductionPages\\Index.cshtml",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAABsAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-25T21:24:10.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\ProductionPages\\Create.cshtml",
-              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Pages\\ProductionPages\\Create.cshtml",
-              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\ProductionPages\\Create.cshtml",
-              "RelativeToolTip": "RazorPages-Pal-App\\Pages\\ProductionPages\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-25T21:20:35.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProductionService.cs",
               "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Service\\ProductionService.cs",
               "RelativeDocumentMoniker": "RazorPages-Pal-App\\Service\\ProductionService.cs",
               "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Service\\ProductionService.cs",
               "RelativeToolTip": "RazorPages-Pal-App\\Service\\ProductionService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAhwB8AAAAkAAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAUwHcAAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T21:18:45.923Z",
+              "WhenOpened": "2024-07-31T22:34:40.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Dto\u0027s\\UserDto.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Dto\u0027s\\UserDto.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Dto\u0027s\\UserDto.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Dto\u0027s\\UserDto.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABEAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T19:58:49.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonalData.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAswCQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T19:58:12.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PersonalData.cshtml",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+              "RelativeToolTip": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAABYAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-31T19:58:08.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAACAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-31T19:51:19.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAywEoAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T19:51:25.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Service\\AuthService.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Service\\AuthService.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAQwG4AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T19:59:37.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Dto\u0027s\\ResponseDto.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Dto\u0027s\\ResponseDto.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Dto\u0027s\\ResponseDto.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Dto\u0027s\\ResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T20:02:10.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\ProductionPages\\Create.cshtml",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Pages\\ProductionPages\\Create.cshtml",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\ProductionPages\\Create.cshtml",
+              "RelativeToolTip": "RazorPages-Pal-App\\Pages\\ProductionPages\\Create.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-31T20:11:20.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "RazorPages-Pal-App\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAqwAwAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-31T19:49:32.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Pages\\Index.cshtml.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA0wBQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T19:42:32.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Pages\\Index.cshtml",
+              "RelativeToolTip": "RazorPages-Pal-App\\Pages\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-31T19:40:40.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Program.cs",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\Program.cs",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\Program.cs",
+              "RelativeToolTip": "RazorPages-Pal-App\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T19:38:12.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "RazorPages-Pal-App\\ScaffoldingReadMe.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-07-31T19:27:55.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RazorPages-Pal-App",
+              "DocumentMoniker": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\RazorPages-Pal-App.csproj",
+              "RelativeDocumentMoniker": "RazorPages-Pal-App\\RazorPages-Pal-App.csproj",
+              "ToolTip": "C:\\Users\\mchla\\OneDrive\\Documentos\\Proyectos\\RazorPages-Pal-App\\RazorPages-Pal-App\\RazorPages-Pal-App.csproj",
+              "RelativeToolTip": "RazorPages-Pal-App\\RazorPages-Pal-App.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-31T19:20:24.165Z",
               "EditorCaption": ""
             }
           ]

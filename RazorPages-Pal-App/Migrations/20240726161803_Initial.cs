@@ -55,30 +55,6 @@ namespace RazorPages_Pal_App.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ResultStoreDto",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ProductName = table.Column<string>(type: "text", nullable: false),
-                    Batch = table.Column<string>(type: "text", nullable: false),
-                    TotalQuantity = table.Column<decimal>(type: "numeric", nullable: false),
-                    ActualQuantity = table.Column<decimal>(type: "numeric", nullable: false),
-                    CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ModificationAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Description = table.Column<string>(type: "text", nullable: true),
-                    Comments = table.Column<string>(type: "text", nullable: true),
-                    UserIdCreation = table.Column<string>(type: "text", nullable: false),
-                    UserNameCreation = table.Column<string>(type: "text", nullable: true),
-                    UserIdModification = table.Column<string>(type: "text", nullable: true),
-                    UserNameModification = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ResultStoreDto", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -185,40 +161,7 @@ namespace RazorPages_Pal_App.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "storeHistories",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    ProductName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
-                    Batch = table.Column<string>(type: "character varying(30)", maxLength: 30, nullable: false),
-                    Quantity = table.Column<decimal>(type: "numeric(10,2)", nullable: false),
-                    CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ModificacionTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Action = table.Column<string>(type: "text", nullable: false),
-                    UserIdCreation = table.Column<string>(type: "text", nullable: false),
-                    Comments = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false),
-                    UserIdModification = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_storeHistories", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_storeHistories_AspNetUsers_UserIdCreation",
-                        column: x => x.UserIdCreation,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_storeHistories_AspNetUsers_UserIdModification",
-                        column: x => x.UserIdModification,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "stores",
+                name: "Stores",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -236,22 +179,22 @@ namespace RazorPages_Pal_App.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_stores", x => x.Id);
+                    table.PrimaryKey("PK_Stores", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_stores_AspNetUsers_UserIdCreation",
+                        name: "FK_Stores_AspNetUsers_UserIdCreation",
                         column: x => x.UserIdCreation,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_stores_AspNetUsers_UserIdModification",
+                        name: "FK_Stores_AspNetUsers_UserIdModification",
                         column: x => x.UserIdModification,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "productions",
+                name: "Productions",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -270,22 +213,22 @@ namespace RazorPages_Pal_App.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_productions", x => x.Id);
+                    table.PrimaryKey("PK_Productions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_productions_AspNetUsers_UserIdCreation",
+                        name: "FK_Productions_AspNetUsers_UserIdCreation",
                         column: x => x.UserIdCreation,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_productions_AspNetUsers_UserIdModification",
+                        name: "FK_Productions_AspNetUsers_UserIdModification",
                         column: x => x.UserIdModification,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_productions_stores_StoreId",
+                        name: "FK_Productions_Stores_StoreId",
                         column: x => x.StoreId,
-                        principalTable: "stores",
+                        principalTable: "Stores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -328,38 +271,28 @@ namespace RazorPages_Pal_App.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_productions_StoreId",
-                table: "productions",
+                name: "IX_Productions_StoreId",
+                table: "Productions",
                 column: "StoreId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_productions_UserIdCreation",
-                table: "productions",
+                name: "IX_Productions_UserIdCreation",
+                table: "Productions",
                 column: "UserIdCreation");
 
             migrationBuilder.CreateIndex(
-                name: "IX_productions_UserIdModification",
-                table: "productions",
+                name: "IX_Productions_UserIdModification",
+                table: "Productions",
                 column: "UserIdModification");
 
             migrationBuilder.CreateIndex(
-                name: "IX_storeHistories_UserIdCreation",
-                table: "storeHistories",
+                name: "IX_Stores_UserIdCreation",
+                table: "Stores",
                 column: "UserIdCreation");
 
             migrationBuilder.CreateIndex(
-                name: "IX_storeHistories_UserIdModification",
-                table: "storeHistories",
-                column: "UserIdModification");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_stores_UserIdCreation",
-                table: "stores",
-                column: "UserIdCreation");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_stores_UserIdModification",
-                table: "stores",
+                name: "IX_Stores_UserIdModification",
+                table: "Stores",
                 column: "UserIdModification");
         }
 
@@ -382,19 +315,13 @@ namespace RazorPages_Pal_App.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "productions");
-
-            migrationBuilder.DropTable(
-                name: "ResultStoreDto");
-
-            migrationBuilder.DropTable(
-                name: "storeHistories");
+                name: "Productions");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "stores");
+                name: "Stores");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

@@ -154,58 +154,6 @@ namespace RazorPages_Pal_App.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("RazorPages_Pal_App.Dto_s.ResultStoreDto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<decimal>("ActualQuantity")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("Batch")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Comments")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime?>("ModificationAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("TotalQuantity")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("UserIdCreation")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserIdModification")
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserNameCreation")
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserNameModification")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ResultStoreDto");
-                });
-
             modelBuilder.Entity("RazorPages_Pal_App.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -339,7 +287,7 @@ namespace RazorPages_Pal_App.Migrations
 
                     b.HasIndex("UserIdModification");
 
-                    b.ToTable("productions");
+                    b.ToTable("Productions");
                 });
 
             modelBuilder.Entity("RazorPages_Pal_App.Models.Store", b =>
@@ -395,60 +343,7 @@ namespace RazorPages_Pal_App.Migrations
 
                     b.HasIndex("UserIdModification");
 
-                    b.ToTable("stores");
-                });
-
-            modelBuilder.Entity("RazorPages_Pal_App.Models.StoreHistory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Action")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Batch")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("character varying(30)");
-
-                    b.Property<string>("Comments")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("character varying(150)");
-
-                    b.Property<DateTime>("CreationTime")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("ModificacionTime")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
-                    b.Property<decimal>("Quantity")
-                        .HasColumnType("decimal(10,2)");
-
-                    b.Property<string>("UserIdCreation")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserIdModification")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserIdCreation");
-
-                    b.HasIndex("UserIdModification");
-
-                    b.ToTable("storeHistories");
+                    b.ToTable("Stores");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -538,25 +433,6 @@ namespace RazorPages_Pal_App.Migrations
                     b.HasOne("RazorPages_Pal_App.Models.ApplicationUser", "UserModification")
                         .WithMany()
                         .HasForeignKey("UserIdModification");
-
-                    b.Navigation("UserCreation");
-
-                    b.Navigation("UserModification");
-                });
-
-            modelBuilder.Entity("RazorPages_Pal_App.Models.StoreHistory", b =>
-                {
-                    b.HasOne("RazorPages_Pal_App.Models.ApplicationUser", "UserCreation")
-                        .WithMany()
-                        .HasForeignKey("UserIdCreation")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("RazorPages_Pal_App.Models.ApplicationUser", "UserModification")
-                        .WithMany()
-                        .HasForeignKey("UserIdModification")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("UserCreation");
 

@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using RazorPages_Pal_App.Dto_s;
 using RazorPages_Pal_App.Models;
+using RazorPages_Pal_App.Service;
 
 namespace RazorPages_Pal_App.Areas.Identity.Pages.Account.Manage
 {
@@ -14,24 +16,38 @@ namespace RazorPages_Pal_App.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<PersonalDataModel> _logger;
+        private readonly AuthService _authService;
 
         public PersonalDataModel(
             UserManager<ApplicationUser> userManager,
-            ILogger<PersonalDataModel> logger)
+            ILogger<PersonalDataModel> logger,
+            AuthService authService)
         {
             _userManager = userManager;
             _logger = logger;
+            _authService = authService;
         }
+        public string Messages { get; set; }
 
+        [BindProperty(SupportsGet =true)]
+        public UserDto userDto { get; set; }
         public async Task<IActionResult> OnGet()
         {
             var user = await _userManager.GetUserAsync(User);
-            if (user == null)
+            
+            if (user!=null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
-            }
+                userDto.UserName = user.UserName.ToString();
+                Console.WriteLine("Date : " + DateTime.Now + " , User : " + user.UserName.ToString());
 
-            return Page();
+                return Page();
+            }
+            else
+            {
+                Messages = "Unable to load user ";
+                return Page();
+
+            }
         }
     }
 }

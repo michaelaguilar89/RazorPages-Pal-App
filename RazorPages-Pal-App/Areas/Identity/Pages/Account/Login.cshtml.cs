@@ -15,9 +15,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using RazorPages_Pal_App.Models;
-using RazorPages_Pal_App.Data;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace RazorPages_Pal_App.Areas.Identity.Pages.Account
 {
@@ -25,15 +22,12 @@ namespace RazorPages_Pal_App.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
-        public LoginModel(SignInManager<ApplicationUser> signInManager,
-                          ILogger<LoginModel> logger)
+
+        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
-            
         }
-
-       
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -121,10 +115,7 @@ namespace RazorPages_Pal_App.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                  
                     _logger.LogInformation("User logged in.");
-
-                 
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

@@ -13,11 +13,11 @@ namespace RazorPages_Pal_App.Data
 
         }
 
-        public DbSet<Production> productions { get; set; }
+        public DbSet<Production> Productions { get; set; }
 
-        public DbSet<Store> stores { get; set; }
+        public DbSet<Store> Stores { get; set; }
 
-        public DbSet<StoreHistory> storeHistories { get; set; }
-        public DbSet<RazorPages_Pal_App.Dto_s.ResultStoreDto> ResultStoreDto { get; set; } = default!;
+        //public DbSet<StoreHistory> storeHistories { get; set; }
+        
     }
 }

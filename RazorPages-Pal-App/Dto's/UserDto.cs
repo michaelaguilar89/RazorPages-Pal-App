@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Components.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace RazorPages_Pal_App.Dto_s
 {
@@ -13,6 +14,8 @@ namespace RazorPages_Pal_App.Dto_s
         public DateTime CreationTime { get; set; }
         [Required]
         public DateTime LastLoginTime { get; set; }
+        [Required]
+        public bool IsActived { get; set; }
 
        
     }

@@ -26,7 +26,7 @@
                     <p> Comments : @Model.Store.Comments</p>
 
                     <div class="text-center">
-                        <a asp-page="/StorePages/Index" class="btn btn-success mt-3">Go to Index</a>
+                        <a href="javascript:history.back()"  class="btn btn-success mt-3">Go Back</a>
                         <a asp-page="/StorePages/Edit" class="btn btn-secondary mx-3 mt-3" asp-route-id="@Model.Store.Id">Edit</a>
                     </div>
                     

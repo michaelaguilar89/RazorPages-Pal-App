@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RazorPages-Pal-App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b40d7aa85f8485551780a6c9a7fceed67b9963c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03cef238a94a2722d735ea5dcaced6b543950d4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RazorPages-Pal-App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RazorPages-Pal-App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
